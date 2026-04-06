@@ -1,0 +1,24 @@
+fastapi
+uvicorn[standard]
+python-multipart
+jinja2
+pydantic
+python-dotenv
+
+langgraph
+langchain
+langchain-core
+langchain-openai
+langchain-chroma
+chromadb
+
+PyMuPDF
+pdfplumber
+pillow
+numpy
+pytesseract
+
+arxiv
+
+# pip install -r requirement.txt
+# requirement.txt 파일에 적힌 모든 모듈을 한꺼번에 설치해줌
