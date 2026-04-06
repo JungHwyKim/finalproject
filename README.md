@@ -52,3 +52,16 @@ finalproject/
 ```
 
 ---
+
+### 가상환경 만들기
+'''Terminal
+python -m venv venv
+'''
+
+'''Terminal
+.\venv\Scripts\Activate
+'''
+
+'''Terminal
+pip install -r requirements.txt
+'''

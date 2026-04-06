@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>멀티모달 논문 분석기 (LangGraph + FastAPI)</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>멀티모달 논문 분석 시스템</h1>
+      <p class="subtitle">PDF 업로드 후 요약/기여점/한계/재현성/비교분석/질의응답을 확인하세요.</p>
+
+      <section class="card">
+        <h2>1) PDF 업로드 및 분석</h2>
+        <form id="uploadForm">
+          <input type="file" id="pdfFile" accept=".pdf" required />
+          <button type="submit">분석 시작</button>
+        </form>
+        <p id="status"></p>
+      </section>
+
+      <section class="card">
+        <h2>2) 분석 결과</h2>
+        <div id="result"></div>
+      </section>
+
+      <section class="card">
+        <h2>3) 논문 Q&A</h2>
+        <div class="qa-row">
+          <input type="text" id="question" placeholder="예: 실험에서 가장 큰 성능 개선은 무엇인가요?" />
+          <button id="askBtn">질문하기</button>
+        </div>
+        <pre id="answer"></pre>
+      </section>
+
+      <section class="card">
+        <h2>4) arXiv 유사 논문 재검색</h2>
+        <div class="qa-row">
+          <input type="text" id="relatedQuery" placeholder="예: retrieval augmented generation multimodal pdf" />
+          <button id="relatedBtn">재검색</button>
+        </div>
+        <div id="relatedStatus"></div>
+        <div id="relatedResult"></div>
+      </section>
+    </main>
+    <script src="/static/app.js"></script>
+  </body>
+</html>
